@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu Virtual - Fronteiras em Chamas</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --accent-color: #ff3333; /* Vermelho chamas/conflito */
+            --pop-yellow: #ffea00; /* Toque pop art inspirado em Nassar */
+            --card-bg: #1e1e1e;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=1200') no-repeat center/cover;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--pop-yellow);
+            font-style: italic;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0a0a0a;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            scroll-margin-top: 80px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--pop-yellow);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .embed-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border: 4px dashed var(--pop-yellow);
+            margin-top: 20px;
+        }
+
+        .embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .manifesto-box {
+            background: #252525;
+            border: 2px solid var(--accent-color);
+            padding: 30px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #0a0a0a;
+            color: #777;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fronteiras em Chamas</h1>
+        <p>Conflitos, Território e a Estética do Manifesto</p>
+    </header>
+
+    <nav>
+        <a href="#eventos">Eventos Históricos</a>
+        <a href="#geopolitica">Geopolítica & Economia</a>
+        <a href="#arte">Intervenção Artística</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="eventos">
+            <h2>Sala 1: Eventos Históricos Essenciais</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Revolução Federalista & O Cerco da Lapa (1894)</h3>
+                    <p>A resistência heroica que moldou os rumos da República brasileira. Durante 26 dias, forças republicanas (pica-paus) contiveram o avanço dos maragatos na cidade da Lapa, Paraná, consolidando o governo de Floriano Peixoto ao custo de vidas locais e transformando o território em um campo de disputa ideológica sangrenta.</p>
+                </div>
+                <div class="card">
+                    <h3>Guerra do Contestado (1912–1916)</h3>
+                    <p>Um conflito social e messiânico de proporções devastadoras na fronteira entre Paraná e Santa Catarina. Envolvendo a população cabocla despojada de suas terras, o fanatismo religioso em torno de monges como José Maria e a violência desmedida do Estado associada aos interesses de grandes corporações transnacionais.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="geopolitica">
+            <h2>Sala 2: Foco Geográfico e Econômico</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Disputa de Limites Territoriais</h3>
+                    <p>A indefinição das fronteiras entre os estados do Paraná e de Santa Catarina gerou uma zona de fricção propícia para o surgimento do Contestado. A regionalização forçada e a falta de assistência estatal direta criaram uma "terra de ninguém" altamente disputada.</p>
+                </div>
+                <div class="card">
+                    <h3>A Estrada de Ferro São Paulo-Rio Grande</h3>
+                    <p>A construção da ferrovia pela Brazil Railway Company, liderada por Percival Farquhar, funcionou como o estopim econômico do conflito. A concessão de terras gerou a expulsão em massa de posseiros locais para abrir caminho para os trilhos do progresso capitalista.</p>
+                </div>
+                <div class="card">
+                    <h3>A Economia da Madeira e Erva-Mate</h3>
+                    <p>A extração predatória de madeira (especialmente da Araucária) e o controle dos ervatais reconfiguraram a economia regional. A riqueza gerada pela exportação contrastava violentamente com a miséria e a perda de território das comunidades tradicionais.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="arte">
+            <h2>Sala 3: Intervenção Artística & Colagem Urbana</h2>
+            <p>Inspirado na estética pop/conceitual do artista paraense <strong>Emmanuel Nassar</strong>, este espaço utiliza a arte como manifesto político e colagem urbana. O infográfico digital abaixo choca a crueza geopolítica da guerra com a iconografia e os símbolos clássicos do Paraná da época (como a araucária, o pinhão, o mate e as fardas militares).</p>
+            
+            <div class="manifesto-box">
+                <h3 style="color: var(--pop-yellow); margin-bottom: 10px;">Estética Emmanuel Nassar:</h3>
+                <p>Uso de cores primárias vibrantes, gambiarras visuais, letreiros populares e ironia institucional para ressignificar símbolos de poder e as marcas da violência territorial no Sul do Brasil.</p>
+            </div>
+
+            <div class="embed-container">
+                <iframe src="https://padlet.com" frameborder="0" allow="camera; microphone; geolocation" allowfullscreen></iframe>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Museu Virtual Fronteiras em Chamas. Desenvolvido para fins educacionais e artísticos.</p>
+    </footer>
+
+</body>
+</html>
